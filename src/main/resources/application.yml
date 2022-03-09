@@ -1,0 +1,16 @@
+server:
+port: 8090
+
+spring:
+datasource:
+url: jdbc:postgresql://localhost:5432/db_order
+username: postgres
+password: sarvin1381
+
+
+jpa:
+database-platform: org.hibernate.dialect.PostgreSQLDialect
+database: POSTGRESQL
+hibernate:
+ddl-auto: update
+
