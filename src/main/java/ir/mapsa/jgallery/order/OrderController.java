@@ -21,13 +21,13 @@ public class OrderController {
         this.mapper = mapper;
     }
 
-    @PostMapping(value = "/save")
+    @PostMapping
     public Order saveOrder(@RequestBody OrderDto orderDto) {
         Order order = mapper.toEntity(orderDto);
         return orderService.save(order);
     }
 
-    @GetMapping(value = "/getAll")
+    @GetMapping
     public List<OrderDto> getAll() {
         List<Order> orders = orderService.findAll();
         List<OrderDto> orderDtos = mapper.toDto(orders);
@@ -42,7 +42,7 @@ public class OrderController {
     }
 
     @ApiOperation(value = "Update an Order")
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Void> updateOrder(@PathVariable Long id,@RequestBody OrderDto orderDto){
         Order order=mapper.toEntity(orderDto);
