@@ -22,9 +22,6 @@ public class Address {
     @Column(name = "avenue", nullable = false)
     private String avenue;
 
-    @Column(name = "plaque", nullable = false)
-    private Integer plaque;
-
     @Column(name = "storey", nullable = true)
     private Integer storey;
 
