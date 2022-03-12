@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@Controller
+/*@Controller
 @RequestMapping("/web")
 public class HomeController {
     @RequestMapping("/home")
@@ -34,4 +34,4 @@ public class HomeController {
         exportToExcel(response);
     }
 
-}
+}*/
